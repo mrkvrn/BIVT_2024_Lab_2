@@ -472,12 +472,13 @@ public class Program
         {
             double x = double.Parse(input);
             input = Console.ReadLine();
-            if (input == "end") break;
             double y = double.Parse(input);
             if ((a - x) * (a - x) + (b - y) * (b - y) < r * r)
             {
                 answer++;
             }
+            input = Console.ReadLine();
+            if (input == "end") break;
         }
         // end
 
@@ -552,7 +553,6 @@ public class Program
         {
             double x = double.Parse(input);
             input = Console.ReadLine();
-            if (input == "end") break;
             double y = double.Parse(input);
             double length = Math.Sqrt(x * x + y * y);
             n++;
@@ -561,6 +561,7 @@ public class Program
                 answerLength = length;
                 answer = n;
             }
+            input = Console.ReadLine();
         }
         // end
 
@@ -598,18 +599,16 @@ public class Program
         {
             double e1 = double.Parse(input);
             input = Console.ReadLine();
-            if (input == "end") break;
             double e2 = double.Parse(input);
             input = Console.ReadLine();
-            if (input == "end") break;
             double e3 = double.Parse(input);
             input = Console.ReadLine();
-            if (input == "end") break;
             double e4 = double.Parse(input);
             if (e1 == 2 || e2 == 2 || e3 == 2 || e4 == 2)
                 answer++;
             avg += (e1 + e2 + e3 + e4) / 4;
             n++;
+            input = Console.ReadLine();
         }
         if (n > 0)
             avg /= n;
